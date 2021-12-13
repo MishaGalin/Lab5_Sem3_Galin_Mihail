@@ -39,6 +39,8 @@
             this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискOfИOrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.первыеДвеБуквыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,9 +145,26 @@
             // 
             // SearchToolStripMenuItem
             // 
+            this.SearchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поискOfИOrToolStripMenuItem,
+            this.первыеДвеБуквыToolStripMenuItem});
             this.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem";
             this.SearchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.SearchToolStripMenuItem.Text = "Поиск";
+            // 
+            // поискOfИOrToolStripMenuItem
+            // 
+            this.поискOfИOrToolStripMenuItem.Name = "поискOfИOrToolStripMenuItem";
+            this.поискOfИOrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискOfИOrToolStripMenuItem.Text = "Подсчет Of и Or";
+            this.поискOfИOrToolStripMenuItem.Click += new System.EventHandler(this.OfOrClick);
+            // 
+            // первыеДвеБуквыToolStripMenuItem
+            // 
+            this.первыеДвеБуквыToolStripMenuItem.Name = "первыеДвеБуквыToolStripMenuItem";
+            this.первыеДвеБуквыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.первыеДвеБуквыToolStripMenuItem.Text = "Первые два слова";
+            this.первыеДвеБуквыToolStripMenuItem.Click += new System.EventHandler(this.FindFirstWord);
             // 
             // MainForm
             // 
@@ -184,6 +203,8 @@
         private System.Windows.Forms.ToolStripMenuItem OpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SearchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискOfИOrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem первыеДвеБуквыToolStripMenuItem;
     }
 }
 

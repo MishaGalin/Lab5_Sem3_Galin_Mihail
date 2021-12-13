@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -20,6 +21,16 @@ namespace Lab5_Sem3_Galin_Mihail
             Match = Regex.Match(Text, RegEx);
         }
 
+        public ISet<string> FindSentencesFirstWords()
+        {
+            ISet<string> words = new HashSet<string>();
+            foreach (Match m in Regex.Matches(Text, @"(([A-Z]|[А-Я])([a-z]|[а-я])+)\b+.*[?]"))
+            {
+                words.Add(m.Groups[1].Value);
+            }
+            return words;
+        }
+
         internal void Next()
         {
             Match = Match?.NextMatch();
@@ -36,6 +47,17 @@ namespace Lab5_Sem3_Galin_Mihail
             {
                 Text = sr.ReadToEnd().Replace("\r", "");  //стандартный символ конца строки
                 FileName = fileName;
+            }
+        }
+
+        internal void GetOfOrStatistics(out int ofc, out int orc)
+        {
+            ofc = 0; orc = 0;
+            foreach (Match m in Regex.Matches(Text, @"\b(of|or)\b"))
+            {
+                if (m.Value == "of") ofc++;
+                else orc++;
+
             }
         }
     }

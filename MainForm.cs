@@ -1,5 +1,6 @@
 ﻿using Lab5_Sem3_Galin_Mihail.Properties;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -19,12 +20,16 @@ namespace Lab5_Sem3_Galin_Mihail
             lstbRegex.Items.Add(@"\b(о)(\S)+");
             lstbRegex.Items.Add(@"([А-Я]).*([.!?])+");
             lstbRegex.Items.Add(@"\s+\w+\s+");
+            lstbRegex.Items.Add(@"\b(of|or)\b");
             lstbRegex.Click += (s, e) =>
               {
                   txtbFindString.Text = lstbRegex.Text;
                   Find(s, e);
               };
         }
+
+        
+
 
         private void DownAnyKey(object sender, KeyEventArgs e)
         {
@@ -37,7 +42,7 @@ namespace Lab5_Sem3_Galin_Mihail
 
         private void Find(object sender, EventArgs e)
         {
-            data.Find(txtbFindString.Text);
+            data.Find((string)txtbFindString.Text);
             ShowMatch();
         }
 
@@ -94,6 +99,19 @@ namespace Lab5_Sem3_Galin_Mihail
                     rtbSearchResult.Text += String.Format("Groups[{0}]={1}\n", i, m.Groups[i]);
                 }
             }
+        }
+
+        private void OfOrClick(object sender, EventArgs e)
+        {
+            data.GetOfOrStatistics(out int ofc, out int orc);
+            rtbSearchResult.Text = $" of: {ofc}, or: {orc}";
+
+        }
+
+        private void FindFirstWord(object sender, EventArgs e)
+        {
+            ISet<string> words = data.FindSentencesFirstWords();
+            rtbSearchResult.Text = String.Join(", ", words);
         }
     }
 }
