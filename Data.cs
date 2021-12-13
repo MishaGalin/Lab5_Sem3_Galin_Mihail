@@ -18,5 +18,20 @@ namespace Lab5_Sem3_Galin_Mihail
                 Text = sr.ReadToEnd().Replace("\r", "");  //стандартный символ конца строки
             }
         }
+
+        public void Find(string RegEx)
+        {
+            if (Text == null)
+            {
+                Console.WriteLine("Попытка поиска без открытия файла");
+                return;
+            }
+            Match = Regex.Match(Text, RegEx);
+        }
+
+        internal void Next()
+        {
+            Match = Match?.NextMatch();
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.txtbFindString.Name = "txtbFindString";
             this.txtbFindString.Size = new System.Drawing.Size(614, 20);
             this.txtbFindString.TabIndex = 0;
+            this.txtbFindString.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DownAnyKey);
             // 
             // btnFind
             // 
@@ -60,6 +61,7 @@
             this.btnFind.TabIndex = 1;
             this.btnFind.Text = "Найти";
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.Find);
             // 
             // btnNext
             // 
@@ -70,6 +72,7 @@
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Еще";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.NextMatch);
             // 
             // lstbRegex
             // 
@@ -127,14 +130,14 @@
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
             this.OpenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.OpenToolStripMenuItem.Text = "Открыть";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenFile);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.ExitToolStripMenuItem.Text = "Выход";
             // 
             // SearchToolStripMenuItem
