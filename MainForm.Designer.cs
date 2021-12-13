@@ -161,6 +161,8 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.Text = "Поиск в текстовом файле";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveSettings);
+            this.Load += new System.EventHandler(this.LoadSettings);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);

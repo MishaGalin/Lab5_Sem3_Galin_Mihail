@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab5_Sem3_Galin_Mihail.Properties;
+using System;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace Lab5_Sem3_Galin_Mihail
         public MainForm()
         {
             InitializeComponent();
-            lstbRegex.Items.Add(@"\b(([A-Z])[a-z]+)\?");
+            lstbRegex.Items.Add(@"\b(([A-Z])[a-z]+)\?\s");
             lstbRegex.Items.Add(@"\s(k...)\s");
             lstbRegex.Click += (s, e) =>
               {
@@ -78,6 +79,19 @@ namespace Lab5_Sem3_Galin_Mihail
         {
             data.Next();
             ShowMatch();
+        }
+
+        private void SaveSettings(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.FileName = data.FileName;
+            Settings.Default.Save();
+        }
+
+        private void LoadSettings(object sender, EventArgs e)
+        {
+            data.ReadFromFile(Settings.Default.FileName);
+            Console.WriteLine($"File is open: {data.FileName}");
+            rtbFileText.Text = data.Text;
         }
     }
 }
