@@ -102,6 +102,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbSearchResult.Location = new System.Drawing.Point(242, 305);
             this.rtbSearchResult.Name = "rtbSearchResult";
+            this.rtbSearchResult.ReadOnly = true;
             this.rtbSearchResult.Size = new System.Drawing.Size(546, 133);
             this.rtbSearchResult.TabIndex = 5;
             this.rtbSearchResult.Text = "";
