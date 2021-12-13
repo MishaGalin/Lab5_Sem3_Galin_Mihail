@@ -50,6 +50,26 @@ namespace Lab5_Sem3_Galin_Mihail
             }
         }
 
+        public IDictionary<string, int> FirstLetterCounts()
+        {
+            SortedDictionary<string, int> counts = new SortedDictionary<string, int>();
+            foreach (Match m in Regex.Matches(Text, @"([A-Z]|[А-Я]|[a-z]|[а-я])\w"))
+            {
+                string b = m.Groups[1].Value.ToUpper();
+                if (counts.ContainsKey(b))
+                {
+                    counts[b]++;
+                }
+                else
+                {
+                    counts[b] = 1; // при чтении было бы исключение «ключ не найден»
+                }
+            }
+            return counts;
+        }
+
+
+
         internal void GetOfOrStatistics(out int ofc, out int orc)
         {
             ofc = 0; orc = 0;

@@ -41,6 +41,7 @@
             this.SearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискOfИOrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.первыеДвеБуквыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПервыхБуквToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +148,8 @@
             // 
             this.SearchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поискOfИOrToolStripMenuItem,
-            this.первыеДвеБуквыToolStripMenuItem});
+            this.первыеДвеБуквыToolStripMenuItem,
+            this.поискПервыхБуквToolStripMenuItem});
             this.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem";
             this.SearchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.SearchToolStripMenuItem.Text = "Поиск";
@@ -165,6 +167,13 @@
             this.первыеДвеБуквыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.первыеДвеБуквыToolStripMenuItem.Text = "Первые два слова";
             this.первыеДвеБуквыToolStripMenuItem.Click += new System.EventHandler(this.FindFirstWord);
+            // 
+            // поискПервыхБуквToolStripMenuItem
+            // 
+            this.поискПервыхБуквToolStripMenuItem.Name = "поискПервыхБуквToolStripMenuItem";
+            this.поискПервыхБуквToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.поискПервыхБуквToolStripMenuItem.Text = "Поиск первых букв";
+            this.поискПервыхБуквToolStripMenuItem.Click += new System.EventHandler(this.FindFirstLetter);
             // 
             // MainForm
             // 
@@ -205,6 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem SearchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискOfИOrToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem первыеДвеБуквыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискПервыхБуквToolStripMenuItem;
     }
 }
 

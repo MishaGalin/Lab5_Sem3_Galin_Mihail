@@ -113,5 +113,11 @@ namespace Lab5_Sem3_Galin_Mihail
             ISet<string> words = data.FindSentencesFirstWords();
             rtbSearchResult.Text = String.Join(", ", words);
         }
+
+        private void FindFirstLetter(object sender, EventArgs e)
+        {
+            //data.FirstLetterCounts();
+            new StatisticsForm(data.FirstLetterCounts()).Show();
+        }
     }
 }
