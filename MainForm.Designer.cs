@@ -42,6 +42,7 @@
             this.поискOfИOrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.первыеДвеБуквыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискПервыхБуквToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискФранцузскихВставокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,7 +150,8 @@
             this.SearchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поискOfИOrToolStripMenuItem,
             this.первыеДвеБуквыToolStripMenuItem,
-            this.поискПервыхБуквToolStripMenuItem});
+            this.поискПервыхБуквToolStripMenuItem,
+            this.поискФранцузскихВставокToolStripMenuItem});
             this.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem";
             this.SearchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.SearchToolStripMenuItem.Text = "Поиск";
@@ -157,23 +159,30 @@
             // поискOfИOrToolStripMenuItem
             // 
             this.поискOfИOrToolStripMenuItem.Name = "поискOfИOrToolStripMenuItem";
-            this.поискOfИOrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискOfИOrToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.поискOfИOrToolStripMenuItem.Text = "Подсчет Of и Or";
             this.поискOfИOrToolStripMenuItem.Click += new System.EventHandler(this.OfOrClick);
             // 
             // первыеДвеБуквыToolStripMenuItem
             // 
             this.первыеДвеБуквыToolStripMenuItem.Name = "первыеДвеБуквыToolStripMenuItem";
-            this.первыеДвеБуквыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.первыеДвеБуквыToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.первыеДвеБуквыToolStripMenuItem.Text = "Первые два слова";
             this.первыеДвеБуквыToolStripMenuItem.Click += new System.EventHandler(this.FindFirstWord);
             // 
             // поискПервыхБуквToolStripMenuItem
             // 
             this.поискПервыхБуквToolStripMenuItem.Name = "поискПервыхБуквToolStripMenuItem";
-            this.поискПервыхБуквToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.поискПервыхБуквToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.поискПервыхБуквToolStripMenuItem.Text = "Поиск первых букв";
             this.поискПервыхБуквToolStripMenuItem.Click += new System.EventHandler(this.FindFirstLetter);
+            // 
+            // поискФранцузскихВставокToolStripMenuItem
+            // 
+            this.поискФранцузскихВставокToolStripMenuItem.Name = "поискФранцузскихВставокToolStripMenuItem";
+            this.поискФранцузскихВставокToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.поискФранцузскихВставокToolStripMenuItem.Text = "Поиск французских вставок";
+            this.поискФранцузскихВставокToolStripMenuItem.Click += new System.EventHandler(this.SearchFrenchWords);
             // 
             // MainForm
             // 
@@ -215,6 +224,7 @@
         private System.Windows.Forms.ToolStripMenuItem поискOfИOrToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem первыеДвеБуквыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискПервыхБуквToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискФранцузскихВставокToolStripMenuItem;
     }
 }
 

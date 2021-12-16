@@ -28,9 +28,6 @@ namespace Lab5_Sem3_Galin_Mihail
               };
         }
 
-        
-
-
         private void DownAnyKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -105,7 +102,6 @@ namespace Lab5_Sem3_Galin_Mihail
         {
             data.GetOfOrStatistics(out int ofc, out int orc);
             rtbSearchResult.Text = $" of: {ofc}, or: {orc}";
-
         }
 
         private void FindFirstWord(object sender, EventArgs e)
@@ -116,8 +112,12 @@ namespace Lab5_Sem3_Galin_Mihail
 
         private void FindFirstLetter(object sender, EventArgs e)
         {
-            //data.FirstLetterCounts();
             new StatisticsForm(data.FirstLetterCounts()).Show();
+        }
+
+        private void SearchFrenchWords(object sender, EventArgs e)
+        {
+            new StatisticsForm(data.SearchFrenchWords()).Show();
         }
     }
 }
